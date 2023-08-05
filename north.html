@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Victor+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="b.html" class="material-symbols-outlined">Home</a>
+        <input type="text" placeholder="Search food to fill your stomach" name="search" class="search-bar" id="searchBar">
+        <button type="button" class="search-button" onclick="search()"><i class="fa fa-search"></i></button>
+        <img src="All Images/logo-removebg-preview.png" alt="logo" width="90px" height="60px" class="logo-small">
+        <a href="#cart_box" class="material-symbols-rounded" onclick="viewCart()">shopping_cart_checkout</a>
+        <a href="#cart_box" class="checkout" onclick="viewCart()">Cart Checkout</a>
+        <figcaption class="logo-name">Kola Pasi</figcaption>
+    </div>
+
+    <div id="cart_box" style="display: none;">
+        <h2 class="your-cart">Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+            <li>
+            </li>
+        </ul>
+        <p>Total Price: Rs.<span id="totalPrice">0</span></p>
+        <a href="#" class="checkout1" onclick="hideCart()">Go Back</a>
+    </div>
+
+    <h1 class="item-title">North Indian Food Varieties in Bangalore</h1>
+
+    <div class="box" data-name="aloo palak" data-price="350">
+        <a href="#cart_box1"><img src="north indian food items/Aloo palak.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">aloo palak</p>
+        <p class="item-rate">Rs.350</p>
+        <p class="item-star">&#10026; 5.1 Ratings</p>
+        <p class="item-para">A1 Hotel, Neo Town Road,<br>Electronic City</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('aloo palak', 350, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="aloo tikki" data-price="300">
+        <a href="#cart_box1"><img src="north indian food items/Aloo tikki.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">aloo tikki</p>
+        <p class="item-rate">Rs.300</p>
+    <p class="item-star">&#10026; 4.2 Ratings</p>
+    <p class="item-para">Lotus Pavilion, ITC Gardenia - Restaurants In Bengaluru</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+                your cart
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('aloo tikki', 300, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="baati" data-price="50">
+        <a href="#cart_box1"><img src="north indian food items/Baati.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">baati</p>
+        <p class="item-rate">Rs.50</p>
+    <p class="item-star">&#10026; 3.9 Ratings</p>
+    <p class="item-para">Iva By SKR- A Petrichor Hotel<br>America</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('baati', 50, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chilli paneer" data-price="100">
+        <a href="#cart_box1"><img src="north indian food items/Chilli paneer.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chilli paneer</p>
+        <p class="item-rate">Rs.100</p>
+    <p class="item-star">&#10026; 4.0 Ratings</p>
+    <p class="item-para">The Leela Palace Bengaluru - Garden City's Only Modern Palace Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chilli paneer', 100, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="churma" data-price="35">
+        <a href="#cart_box1"><img src="north indian food items/Churma.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">churma</p>
+        <p class="item-rate">Rs.35</p>
+    <p class="item-star">&#10026; 3.9 Ratings</p>
+    <p class="item-para">Kola Pasi Hotel<br>Thiruvannamalai</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('churma', 35, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="dahi vada" data-price="40">
+        <a href="#cart_box1"><img src="north indian food items/Dahi vada.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">dahi vada</p>
+        <p class="item-rate">Rs.40</p>
+    <p class="item-star">&#10026; 4.0 Ratings</p>
+    <p class="item-para">Keys Select Hosur Road - By Lemon Tree Hotels</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('dahi vada', 40, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name=" dum aloo" data-price="350">
+        <a href="#cart_box1"><img src="north indian food items/Dum aloo.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">dum aloo</p>
+        <p class="item-rate">Rs.350</p>
+    <p class="item-star">&#10026; 4.5 Ratings</p>
+    <p class="item-para">The Oterra Hotel<br>London</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart(' dum aloo', 350, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="flat paneer kulcha" data-price="350">
+        <a href="#cart_box1"><img src="north indian food items/Flatbread. Paneer kulcha..jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">flat paneer kulcha</p>
+        <p class="item-rate">Rs.350</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Lemon Tree Hotel, Electronics City, Bangalore</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('flat paneer kulcha', 350, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="gajar ka halwa" data-price="50">
+        <a href="#cart_box1"><img src="north indian food items/Gajar ka halwa.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">gajar ka halwa</p>
+        <p class="item-rate">Rs.50</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Soul Indian Specialty Restaurant, Svenska Design Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('gajar ka halwa', 50, 'quantity1')"> + Add to cart</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+.nav-bar
+        {
+            border: 2px solid orange;
+            background-color: orange;
+            height: 90px;
+            width: 1346px;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+        }
+        .nav-image
+        {
+            top: 0px;
+            right: 0px;
+            position: absolute;
+        }
+        .search-bar
+        {
+            position: absolute;
+            left: 380px;
+            top: 23px;
+            height: 35px;
+            width: 400px;
+            border-radius: 12px;
+            border-color: orange;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            font-size: 16px;
+        }
+        .search-button
+        {
+            position: absolute;
+            top: 23.5px;
+            left: 770px;
+            height: 39px;
+            width: 35px;
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-left-color: black;
+        }
+        .toll-free
+        {
+            left: 30px;
+            position: absolute;
+            top: 15px;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .Log-In
+        {
+            position: absolute;
+            top: 33px;
+            right: 280px;
+            font-size: 20px;
+            font-family: 'Edu SA Beginner', cursive;
+        }
+        .Sign-Up
+        {
+            position: absolute;
+            top: 33px;
+            right: 190px;
+            font-size: 20px;
+            font-family: 'Edu SA Beginner', cursive;
+        }
+        .slideshow
+        {
+            position: absolute;
+            top: 140px;
+            left: 150px;
+            right: 150px;
+        }
+        .varities
+        {
+            top: 550px;
+            left: 220px;
+            position: absolute;
+            word-spacing: 170px;
+            font-family: 'Victor Mono', monospace;
+        }
+        a
+        {
+            text-decoration: none;
+            border: 2px solid orange;
+            color: black;
+            font-weight: bold;
+            border-radius: 3px;
+            background-color: orange;
+        }
+        .heading
+        {
+            position: absolute;
+            top: 470px;
+            left: 640px;
+            text-decoration:overline;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .linking-files
+        {
+            top: 780px;
+            left: 260px;
+            word-spacing: 270px;
+            position: absolute;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Victor Mono', monospace;
+        }
+        .linking-files2
+        {
+            top: 1130px;
+            left: 250px;
+            word-spacing: 265px;
+            position: absolute;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Victor Mono', monospace;
+        }
+        .logo-small
+        {
+            right: 40px;
+            top: 10px;
+            position: absolute;
+        }
+        .logo-name
+        {
+            position: absolute;
+            top: 70px;
+            right: 25px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .second-variety
+        {
+            top: 340px;
+            left: 0px;
+            position: absolute;
+        }
+        .off
+        {
+            position: absolute;
+            top: 1400px;
+            left: 140px;
+            color: white;
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .offer
+        {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 100px;
+            left: 5px;
+        }
+        .masala-papad
+        {
+            width: 300px;
+            height: 185px;
+            position: absolute;
+            top: 1280px;
+            left: 120px;
+            image-rendering: crisp-edges;
+            border-radius: 20px;
+        }
+        .masala-papad-para
+        {
+            position: absolute;
+            top: 1490px;
+            left: 140px;
+            color: black;
+            font-size: 20px;
+            color: rgb(141, 136, 136);
+        }
+        .masala-papad-star
+        {
+            position: absolute;
+            top: 1467px;
+            left: 140px;
+            color: green;
+        }
+        .masala-papad:hover
+        {
+            opacity: 0.7;
+        }
+        .chill-paneer
+        {
+            width: 300px;
+            height: 185px;
+            position: absolute;
+            top: 1280px;
+            left: 520px;
+            image-rendering: crisp-edges;
+            border-radius: 20px;
+        }
+        .chill-paneer-star
+        {
+            position: absolute;
+            top: 1467px;
+            left: 530px;
+            color: green;
+        }
+        .chill-paneer-para
+        {
+            position: absolute;
+            top: 1490px;
+            left: 530px;
+            color: black;
+            font-size: 20px;
+            color: rgb(141, 136, 136);
+        }
+        .chill-paneer:hover
+        {
+            opacity: 0.7;
+        }
+        .jeera-rice
+        {
+            width: 300px;
+            height: 185px;
+            position: absolute;
+            top: 1280px;
+            left: 920px;
+            image-rendering: crisp-edges;
+            border-radius: 20px;
+        }
+        .jeera-rice-star
+        {
+            position: absolute;
+            top: 1467px;
+            left: 930px;
+            color: green;
+        }
+        .jeera-rice-para
+        {
+            position: absolute;
+            top: 1490px;
+            left: 930px;
+            color: black;
+            font-size: 20px;
+            color: rgb(141, 136, 136);
+        }
+        .jeera-rice:hover
+        {
+            opacity: 0.7;
+        }
+        .north-indian-heading
+        {
+            position: absolute;
+            top: 1170px;
+            left: 28px;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        .box1
+        {
+            border: 2px solid white;
+            height: 280px;
+            width: 300px;
+            position: absolute;
+            top: 1261.0px;
+            left: 118px;
+            display: block;
+            box-shadow: 0 0 10px 5px #42424485;
+            border-top-left-radius: 26px;
+            border-top-right-radius: 26px;
+        }
+        .box2
+        {
+            border: 2px solid white;
+            height: 280px;
+            width: 300px;
+            position: absolute;
+            top: 1261.2px;
+            left: 518px;
+            display: block;
+            box-shadow: 0 0 10px 5px #42424485;
+            border-top-left-radius: 26px;
+            border-top-right-radius: 26px;
+        }
+        .box3
+        {
+            border: 2px solid white;
+            height: 280px;
+            width: 300px;
+            box-shadow: 0 0 10px 5px #42424485;
+            position: absolute;
+            top: 1261.2px;
+            left: 918px;
+            display: block;
+            border-top-left-radius: 26px;
+            border-top-right-radius: 26px;
+        }
+      

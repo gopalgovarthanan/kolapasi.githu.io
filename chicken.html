@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Shopping Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Victor+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="b.html" class="material-symbols-outlined">Home</a>
+        <input type="text" placeholder="Search food to fill your stomach" name="search" class="search-bar" id="searchBar">
+        <button type="button" class="search-button" onclick="search()"><i class="fa fa-search"></i></button>
+        <img src="All Images/logo-removebg-preview.png" alt="logo" width="90px" height="60px" class="logo-small">
+        <a href="#cart_box" class="material-symbols-rounded" onclick="viewCart()">shopping_cart_checkout</a>
+        <a href="#cart_box" class="checkout" onclick="viewCart()">Cart Checkout</a>
+        <figcaption class="logo-name">Kola Pasi</figcaption>
+    </div>
+
+    <div id="cart_box" style="display: none;">
+        <h2 class="your-cart">Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <a href="#" class="checkout1" onclick="hideCart()">Go Back</a>
+    </div>
+
+    <h1 class="item-title">chicken Varieties in Bangalore</h1>
+
+    <div class="box" data-name="chicken 65" data-price="50">
+        <a href="#cart_box1"><img src="chicken/360_F_193913273_m18uxjyykl65LMtM4bC5FBHxGB14grbJ.jpg" alt="chicken pakoda" class="item-image"></a>
+        <p class="item-text">chicken 65</p>
+        <p class="item-rate">Rs.50</p>
+        <p class="item-star">&#10026; 5.1 Ratings</p>
+        <p class="item-para">A1 Hotel, Neo Town Road,<br>Electronic City</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken 65', 50, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken tenders" data-price="350">
+        <a href="#cart_box1"><img src="chicken/chicken tenders.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken tenders</p>
+        <p class="item-rate">Rs.350</p>
+    <p class="item-star">&#10026; 4.2 Ratings</p>
+    <p class="item-para">Lotus Pavilion, ITC Gardenia - Restaurants In Bengaluru</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+                your cart
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken tenders', 350, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="Chicken-Kathi-Roll-1" data-price="350">
+        <a href="#cart_box1"><img src="chicken/Chicken-Kathi-Roll-1.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">Chicken-Kathi-Roll-1</p>
+        <p class="item-rate">Rs.350</p>
+    <p class="item-star">&#10026; 4.0 Ratings</p>
+    <p class="item-para">Iva By SKR- A Petrichor Hotel<br>America</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('Chicken-Kathi-Roll', 350, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="fried chicken" data-price="100">
+        <a href="#cart_box1"><img src="chicken/fried chicken.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">fried chicken</p>
+        <p class="item-rate">Rs.100</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">The Leela Palace Bengaluru - Garden City's Only Modern Palace Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('fried chicken', 100, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken grill" data-price="250">
+        <a href="#cart_box1"><img src="chicken/grill.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text"> chicken grill</p>
+        <p class="item-rate">Rs.250</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Kola Pasi Hotel<br>Thiruvannamalai</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('grill', 250, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken kolambu" data-price="140">
+        <a href="#cart_box1"><img src="chicken/istockphoto-471614507-612x612.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken kolambu</p>
+        <p class="item-rate">Rs.140</p>
+    <p class="item-star">&#10026; 4.0 Ratings</p>
+    <p class="item-para">Keys Select Hosur Road - By Lemon Tree Hotels</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken kolambu', 140, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken bbq" data-price="150">
+        <a href="#cart_box1"><img src="chicken/news15137.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken bbq</p>
+        <p class="item-rate">Rs.150</p>
+    <p class="item-star">&#10026; 4.5 Ratings</p>
+    <p class="item-para">The Oterra Hotel<br>London</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('bbq', 150, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken lollipop" data-price="199">
+        <a href="#cart_box1"><img src="chicken/pxfuel (2).jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken lollipop</p>
+        <p class="item-rate">Rs.199</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Lemon Tree Hotel, Electronics City, Bangalore</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken lollipop', 199, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken biryani" data-price="450">
+        <a href="#cart_box1"><img src="chicken/stock-photo-mutton-gosht-biryani-a-rice.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken biryani</p>
+        <p class="item-rate">Rs.450</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Soul Indian Specialty Restaurant, Svenska Design Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken biryani', 450, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken rice" data-price="100">
+        <a href="#cart_box1"><img src="chicken/Chicken rice.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken rice</p>
+        <p class="item-rate">Rs.99</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Soul Indian Specialty Restaurant, Svenska Design Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken rice', 50, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken nudals" data-price="100">
+        <a href="#cart_box1"><img src="chicken/chicken nudals.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken noodles</p>
+        <p class="item-rate">Rs.150</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Soul Indian Specialty Restaurant, Svenska Design Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken noodles', 150, 'quantity1')"> + Add to cart</p>
+    </div>
+    <div class="box" data-name="chicken bucket briyani" data-price="100">
+        <a href="#cart_box1"><img src="chicken/chicken bucket biryani.jpg" alt="full meals" class="item-image"></a>
+        <p class="item-text">chicken bucket biryani</p>
+        <p class="item-rate">Rs.499</p>
+    <p class="item-star">&#10026; 5.0 Ratings</p>
+    <p class="item-para">Soul Indian Specialty Restaurant, Svenska Design Hotel</p>
+        <div class="quantity">
+            <label>Quantity</label>
+            <select id="quantity1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div id="cart_box1" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul>
+            </ul>
+            <a href="#"><span class="material-symbols-outlined" onclick="hideCart1()">arrow_back</span></a>
+        </div>
+        <p class="add-to-cart" onclick="addToCart('chicken bucket biryani', 50, 'quantity1')"> + Add to cart</p>
+    </div>
+</body>
+</html>
